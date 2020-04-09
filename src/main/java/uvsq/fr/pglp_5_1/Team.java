@@ -1,6 +1,8 @@
 package uvsq.fr.pglp_5_1;
 
-public abstract class Team {
+import java.io.Serializable;
+
+public abstract class Team implements Serializable{
 	
 	public abstract void print();
 }

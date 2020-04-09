@@ -1,8 +1,9 @@
 package uvsq.fr.pglp_5_1;
 
 import java.util.Iterator;
+import java.io.Serializable;
 
-public class Annuaire implements Iterable<Team>{
+public class Annuaire implements Iterable<Team>, Serializable{
 
 	private static Annuaire ANNUAIRE;
 	

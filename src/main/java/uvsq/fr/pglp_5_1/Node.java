@@ -1,6 +1,8 @@
 package uvsq.fr.pglp_5_1;
 
-public class Node<T> {
+import java.io.Serializable;
+
+public class Node<T>implements Serializable  {
 
 
 		private Node<T> precedent = null; // noeud précedent

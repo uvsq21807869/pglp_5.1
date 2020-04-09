@@ -1,8 +1,9 @@
 package uvsq.fr.pglp_5_1;
 
+import java.io.Serializable;
 import java.util.Iterator;
 
-public class TeamIterator<Team> implements Iterator<Team> {
+public class TeamIterator<Team> implements Iterator<Team> , Serializable{
 
 		private int index;
 		private Node<Team> t;

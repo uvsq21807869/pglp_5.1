@@ -1,10 +1,11 @@
 package uvsq.fr.pglp_5_1;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Personnel extends Team{
+public class Personnel extends Team implements Serializable {
 	private final String nom;
 	private final String prenom;
 	private final String fonction;

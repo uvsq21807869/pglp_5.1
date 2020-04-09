@@ -1,10 +1,12 @@
 package uvsq.fr.pglp_5_1;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Groupe  extends Team {
+public class Groupe  extends Team implements Iterable<Team>, Serializable {
 
 			private final String nom;
 			private List<Team> list;
@@ -33,6 +35,15 @@ public class Groupe  extends Team {
 			public void print() {
 				// TODO Auto-generated method stub
 				
+			}
+
+
+
+
+			@Override
+			public Iterator<Team> iterator() {
+				// TODO Auto-generated method stub
+				return null;
 			}
 			
 		
