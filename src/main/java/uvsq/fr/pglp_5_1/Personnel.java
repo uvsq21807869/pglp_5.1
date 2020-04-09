@@ -4,13 +4,14 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Personnel extends Team implements Serializable {
 	private final String nom;
 	private final String prenom;
 	private final String fonction;
 	private final java.time.LocalDate dateNaissance;
-	private final ArrayList<String> numeroTel;
+	private final List<String> numeroTel;
 	
 
 	
@@ -20,7 +21,7 @@ public class Personnel extends Team implements Serializable {
 		private final String prenom;
 		private final String fonction;
 		private  java.time.LocalDate dateNaissance = java.time.LocalDate.now();
-		private ArrayList<String>  numeroTel;
+		private List<String>  numeroTel;
 		
 		
 		public Builder(String nom, String prenom, String fonction) {
@@ -30,9 +31,9 @@ public class Personnel extends Team implements Serializable {
 			
 		}
                     
-		public Builder updatePhoneList(ArrayList<String> phone) {
+		public Builder updatePhoneList(List<String> tmp) {
 			
-			this.numeroTel = phone;
+			this.numeroTel = tmp;
 			
 			return this;
 		}
@@ -68,7 +69,7 @@ public class Personnel extends Team implements Serializable {
 		return prenom;
 	}
 
-	public ArrayList<String> getNumeroTel() {
+	public List<String> getNumeroTel() {
 		return numeroTel;
 	}
 
@@ -82,8 +83,8 @@ public class Personnel extends Team implements Serializable {
 	}
 
 	public void print(){
-        System.out.println("les infdormtion du personnel sont :  "  +this.fonction
-                + "  " + this.nom +  "  " + this.prenom);
+        System.out.println("les informtion du personnel sont :  "  +this.nom
+                + "  " + this.prenom +  "  " + this.fonction);
         
     }
             
