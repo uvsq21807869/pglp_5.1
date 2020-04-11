@@ -61,13 +61,13 @@ public class AppTest
         a.addEquipe(g2);
 
         System.out.println("creer");
-        try(ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("C:/Users/Amina AAA/Desktop/amina")))) {
+        try(ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("./amina")))) {
             out.writeObject(Annuaire.getInstance());
         }
         catch(IOException ioe){
 
         }
-        try(ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream("C:/Users/Amina AAA/Desktop/amina")))) {
+        try(ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream("./amina")))) {
             Annuaire  test = (Annuaire) in.readObject();
             for(Team t : test) {
 
